@@ -1,5 +1,13 @@
-from parser import *
+from parser_1 import *
+from abc import ABC, abstractmethod
 import sys
+
+class GraphFormatterInterface(ABC):
+    # Abstract Interface.
+
+    @abstractmethod
+    def format(self, g: Graph) -> str:
+        pass
 
 def to_adjacency_list(path):
     temp = 0

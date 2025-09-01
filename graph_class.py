@@ -1,3 +1,23 @@
+from abc import ABC, abstractmethod
+
+class GraphInterface(ABC):
+    # Abstract interface.
+
+    @abstractmethod
+    def add_node(self,node): ...
+    
+    @abstractmethod
+    def add_edge(self, src, dest, weight): ...
+    
+    @abstractmethod
+    def remove_node(self, node): ...
+    
+    @abstractmethod
+    def remove_edge(self, src, dest): ...
+    
+    @abstractmethod
+    def __str__(self): ...
+
 class Graph:
     def __init__(self):
         self.adj = {}

@@ -1,4 +1,12 @@
 from graph_class import Graph
+from abc import ABC, abstractmethod
+
+class MapParserInterface(ABC):
+    # Abstract Interface.
+
+    @abstractmethod
+    def parse_map_file(self, path: str) -> Graph:
+        pass
 
 class ParseError(Exception):
     """Raised when the input map file has invalid structure."""
